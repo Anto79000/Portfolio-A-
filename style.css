@@ -1,0 +1,140 @@
+/* 1. RESET ET BASE */
+* {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #f4f4f4, #e8e8e8, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 2. HEADER ET NAVIGATION */
+header {
+    background: rgb(0, 0, 0) !important;
+    color: #ffffff; 
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid #da1999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#theme-toggle {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 3. GRILLE DE PROJETS */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. MODE SOMBRE */
+body.dark-mode {
+    background: #121212;
+    color: #f4f4f4;
+}
+
+.dark-mode .project-card {
+    background: rgba(40, 40, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 5. TAGS */
+.tag {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+.tag.html { background: #ce6d17; color: white; }
+.tag.css { background: #3498db; color: white; }
+.tag.js { background: #f1c40f; color: #000000; }
+.tag.design { background: #772e94; color: white; }
+
+/* 6. BOUTON RETOUR EN HAUT (VERT) */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #da2828; /* VERT */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    z-index: 2000;
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#back-to-top:hover { background-color: #32c588; transform: scale(1.1); }
+
+/* 7. FORMULAIRE */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.btn-submit {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonin | Portfolio Développeur</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+    <header>
+        <div class="logo">
+            <h1>Antonin</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li> 
+                <li><button id="theme-toggle">☀️ Mode clair</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about" data-aos="fade-right">
+            <h2>À propos</h2>
+            <p>Passionné par le développement web, j'ai conçu ce site pour présenter mes réalisations.</p>
+        </section>
+
+        <section id="projects" data-aos="fade-up">
+            <h2>Mes Projets</h2>
+            <div class="project-grid">
+                <article class="project-card" data-aos="zoom-in">
+                    <h3>Projet 1</h3>
+                    <p>Une application web innovante créée avec les dernières technologies.</p>
+                    <div class="tags">
+                        <span class="tag html">HTML</span> 
+                        <span class="tag css">CSS</span>
+                        <span class="tag js">JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Projet 2</h3>
+                    <p>Un site de design moderne avec des animations fluides et moderne.</p>
+                    <div class="tags">
+                        <span class="tag design">Design</span>
+                        <span class="tag css">CSS</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-up">
+            <h2>Me contacter</h2>
+            <form id="contact-form" action="https://formspree.io/f/xwvnkdry" method="POST">
+                <input type="text" name="name" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Antonin | Créé avec passion</p>
+    </footer>
+
+    <button id="back-to-top" title="Retour en haut">↑</button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
