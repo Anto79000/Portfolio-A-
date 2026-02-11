@@ -117,10 +117,10 @@ body.dark-mode {
     display: none;
     cursor: pointer;
     font-size: 24px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgb(199, 10, 10);
 }
 
-#back-to-top:hover { background-color: #32c588; transform: scale(1.1); }
+#back-to-top:hover { background-color: #c53294; transform: scale(1.1); }
 
 /* 7. FORMULAIRE */
 #contact-form input, #contact-form textarea {
