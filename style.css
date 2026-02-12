@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(-45deg, #f4f4f4, #e8e8e8, #ffffff);
+    background: linear-gradient(-45deg, #ffffff, #e8e8e8, #ffffff);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: #333;
@@ -22,7 +22,7 @@ body {
 
 /* 2. HEADER ET NAVIGATION */
 header {
-    background: rgb(0, 0, 0) !important;
+    background: #da1999 !important;
     color: #ffffff; 
     padding: 20px;
     text-align: center;
@@ -88,6 +88,42 @@ body.dark-mode {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* 5. taping effect */
+.type {
+    display: inline-flex; 
+}
+
+.type span {
+    word-break: break-all;
+    height: 1.2em;
+    width: 100%;
+    overflow: hidden;
+    animation: t 3s linear infinite alternate;
+}
+.type span:before {
+    content:" ";
+    display: inline-block;
+}
+
+@keyframes t{
+    90%,100%{width: 0%;}
+}
+
+/**/
+
+h2 {
+    display: table;
+    margin: auto;
+}
+
+p {
+    font-size: 25px;
+}
+
+p + p {
+    font-style: italic;
+}
+
 /* 5. TAGS */
 .tag {
     padding: 5px 12px;
@@ -109,7 +145,7 @@ body.dark-mode {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #da2828; /* VERT */
+    background-color: #000000; /* VERT */
     color: white;
     border: none;
     border-radius: 50%;
@@ -117,10 +153,10 @@ body.dark-mode {
     display: none;
     cursor: pointer;
     font-size: 24px;
-    box-shadow: 0 5px 15px rgb(199, 10, 10);
+    box-shadow: 0 5px 15px #da1999;
 }
 
-#back-to-top:hover { background-color: #c53294; transform: scale(1.1); }
+#back-to-top:hover { background-color: #000000; transform: scale(1.1); }
 
 /* 7. FORMULAIRE */
 #contact-form input, #contact-form textarea {
@@ -137,4 +173,39 @@ body.dark-mode {
     padding: 12px 25px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.DEV {
+    display: inline-flex; 
+}
+
+.DEV span {
+    word-break: break-all;
+    height: 1.2em;
+    width: 100%;
+    overflow: hidden;
+    animation: D 3s linear infinite alternate;
+}
+.DEV span:before {
+    content:" ";
+    display: inline-block;
+}
+
+@keyframes D{
+    90%,100%{width: 100%;}
+}
+
+/**/
+
+h2 {
+    display: table;
+    margin: auto;
+}
+
+p {
+    font-size: 25px;
+}
+
+p + p {
+    font-style: oblique;
 }
