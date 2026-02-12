@@ -96,7 +96,7 @@ body.dark-mode {
 .type span {
     word-break: break-all;
     height: 1.2em;
-    width: 100%;
+    width: 115%;
     overflow: hidden;
     animation: t 3s linear infinite alternate;
 }
